@@ -1,22 +1,16 @@
-import React from 'react'
-import './App.css';
-import Header from './Listingpages/header/Header';
+import React from "react";
+import "./App.css";
+
 import { Route, Routes, Link } from "react-router-dom";
 import HomePage from "./pages/HomePage/HomePage";
 import MyListingPage from "./pages/MyListingPage/MyListingPage";
 import ProfilePage from "./pages/ProfilePage/ProfilePage";
+import Menu from "./components/Menu/Menu";
 
 function App() {
   return (
     <div className="App">
-
-     <Header />
-
-      <Link to="/home"> Home ||</Link>
-
-      <Link to="/profile"> Profile ||</Link>
-
-      <Link to="/mylisting"> My Listing ||</Link>
+      <Menu />
 
       <h1>Landing Pages</h1>
 
@@ -25,7 +19,6 @@ function App() {
         <Route path="/profile" element={<ProfilePage />} />
         <Route path="/mylisting" element={<MyListingPage />} />
       </Routes>
-
     </div>
   );
 }
