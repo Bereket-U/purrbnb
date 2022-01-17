@@ -4,15 +4,12 @@ import { Route, Routes, Link } from "react-router-dom";
 import HomePage from "./pages/HomePage/HomePage";
 import MyListingPage from "./pages/MyListingPage/MyListingPage";
 import ProfilePage from "./pages/ProfilePage/ProfilePage";
+import Menu from "./components/Menu/Menu";
 
 function App() {
   return (
     <div className="App">
-      <Link to="/home"> Home ||</Link>
-
-      <Link to="/profile"> Profile ||</Link>
-
-      <Link to="/mylisting"> My Listing ||</Link>
+      <Menu />
 
       <h1>Landing Pages</h1>
 
