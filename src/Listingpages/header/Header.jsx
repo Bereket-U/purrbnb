@@ -13,7 +13,7 @@ function Header() {
            
                 <img
                     className="header__icon"
-                    src="/public/images/logo.png"
+                    src=""
                     alt=""
                 />
             
