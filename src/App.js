@@ -1,28 +1,41 @@
-import React from "react";
+import React, { Component } from "react";
 import "./App.css";
-import { Route, Routes, Link } from "react-router-dom";
+import { Route, Routes, Navigate } from "react-router-dom";
 import HomePage from "./pages/HomePage/HomePage";
 import MyListingPage from "./pages/MyListingPage/MyListingPage";
 import ProfilePage from "./pages/ProfilePage/ProfilePage";
+import AuthPage from "./pages/AuthPage/AuthPage";
 
-function App() {
-  return (
-    <div className="App">
-      <Link to="/home"> Home ||</Link>
+class App extends Component {
+  state = {
+    user: null,
+  };
 
-      <Link to="/profile"> Profile ||</Link>
+  setUserInState = (incomingUserData) => {
+    this.setState({ user: incomingUserData });
+  };
 
-      <Link to="/mylisting"> My Listing ||</Link>
-
-      <h1>Landing Pages</h1>
-
-      <Routes>
-        <Route path="/home" element={<HomePage />} />
-        <Route path="/profile" element={<ProfilePage />} />
-        <Route path="/mylisting" element={<MyListingPage />} />
-      </Routes>
-    </div>
-  );
+  render() {
+    return (
+      <main className="App">
+        {this.state.user ? (
+          <Routes>
+            <Route
+              path="/mylisting"
+              render={(props) => <MyListingPage {...props} />}
+            />
+            <Route
+              path="/profile"
+              render={(props) => <ProfilePage {...props} />}
+            />
+            <Navigate to="/home" />
+          </Routes>
+        ) : (
+          <AuthPage setUserInState={this.setUserInState} />
+        )}
+      </main>
+    );
+  }
 }
 
 export default App;
