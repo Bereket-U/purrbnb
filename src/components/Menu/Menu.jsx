@@ -23,20 +23,28 @@ export default function Menu() {
             </a>
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">
+                <Link to="/home" class="nav-link active" aria-current="page">
                   Home
-                </a>
+                </Link>
+              </li>
+              <li class="nav-item">
+                <Link to="/profile" class="nav-link active" aria-current="page">
+                  Profile
+                </Link>
+              </li>
+              <li class="nav-item">
+                <Link
+                  to="/mylisting"
+                  class="nav-link active"
+                  aria-current="page"
+                >
+                  My Listing
+                </Link>
               </li>
             </ul>
           </div>
         </div>
       </nav>
-
-      <Link to="/home"> Home ||</Link>
-
-      <Link to="/profile"> Profile ||</Link>
-
-      <Link to="/mylisting"> My Listing ||</Link>
     </div>
   );
 }
