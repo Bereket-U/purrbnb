@@ -14,8 +14,6 @@ function App() {
       <Menu />
       < Search />
 
-      <h1>Landing Pages</h1>
-
       <Routes>
         <Route path="/home" element={<HomePage />} />
         <Route path="/profile" element={<ProfilePage />} />

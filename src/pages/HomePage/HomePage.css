@@ -1,0 +1,35 @@
+.home__section {
+    display: flex;
+    padding: 30px;
+}
+
+
+
+.carouselContainer {
+    width: 80vw;
+    margin: auto;
+    border: 4px solid black;
+    border-radius: 20px;
+    overflow: hidden;
+      
+}
+
+.textContainer {
+    display: inline-block;
+    background-color: #0000009d;
+    border-radius: 50px;
+    margin: 10px 0 0 0 auto;
+}
+
+.textContainer h5,
+p {
+    padding: 5px 30px 5px 30px;
+    margin: 0 auto;
+}
+@media screen and (max-width: 600px) {
+
+    .carouselContainer {
+        min-width: 340px;
+    }
+
+}
