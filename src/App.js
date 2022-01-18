@@ -5,14 +5,15 @@ import HomePage from "./pages/HomePage/HomePage";
 import MyListingPage from "./pages/MyListingPage/MyListingPage";
 import ProfilePage from "./pages/ProfilePage/ProfilePage";
 import Menu from "./components/Menu/Menu";
+import Search from "./components/Search/Search";
 
 
 function App() {
   return (
     <div className="App">
       <Menu />
+      < Search />
 
-      
 
       <Routes>
         <Route path="/home" element={<HomePage />} />
