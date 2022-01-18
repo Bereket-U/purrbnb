@@ -1,11 +1,12 @@
 import React, { Component } from "react";
 import "./App.css";
-<<<<<<< HEAD
 import { Route, Routes, Navigate } from "react-router-dom";
 import HomePage from "./pages/HomePage/HomePage";
 import MyListingPage from "./pages/MyListingPage/MyListingPage";
 import ProfilePage from "./pages/ProfilePage/ProfilePage";
 import AuthPage from "./pages/AuthPage/AuthPage";
+import Menu from "./components/Menu/Menu"
+import Search from "./components/Search/Search"
 
 class App extends Component {
   state = {
@@ -23,25 +24,12 @@ class App extends Component {
       this.setState({ user: userDoc });
     }
   };
-=======
-
-import { Route, Routes, Link } from "react-router-dom";
-import HomePage from "./pages/HomePage/HomePage";
-import MyListingPage from "./pages/MyListingPage/MyListingPage";
-import ProfilePage from "./pages/ProfilePage/ProfilePage";
-import Menu from "./components/Menu/Menu";
-import Search from "./components/Search/Search";
-
-function App() {
-  return (
-    <div className="App">
-      <Menu />
-      < Search />
->>>>>>> 075f1281a5c1f52222cd59505588d545bdf4ca6d
 
   render() {
     return (
       <div className="App">
+        <Menu />
+        <Search />
         {this.state.user ? (
           <Routes>
             <Route
