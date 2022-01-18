@@ -15,9 +15,17 @@ class App extends Component {
     this.setState({ user: incomingUserData });
   };
 
+  componentDidMount = () => {
+    let token = localStorage.getItem("token");
+    if (token) {
+      let userDoc = JSON.parse(atob(token.split(".")[1])).user;
+      this.setState({ user: userDoc });
+    }
+  };
+
   render() {
     return (
-      <main className="App">
+      <div className="App">
         {this.state.user ? (
           <Routes>
             <Route
@@ -33,7 +41,7 @@ class App extends Component {
         ) : (
           <AuthPage setUserInState={this.setUserInState} />
         )}
-      </main>
+      </div>
     );
   }
 }
