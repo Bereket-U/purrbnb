@@ -12,7 +12,9 @@ function App() {
   return (
     <div className="App">
       <Menu />
+      <br />
       < Search />
+      <br />
 
 
       <Routes>
