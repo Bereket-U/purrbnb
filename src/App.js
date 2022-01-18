@@ -1,14 +1,11 @@
 import React, { Component, useState, useEffect } from "react";
 import "./App.css";
-
 import { Route, Routes, useNavigate } from "react-router-dom";
 import HomePage from "./pages/HomePage/HomePage";
 import MyListingPage from "./pages/MyListingPage/MyListingPage";
 import ProfilePage from "./pages/ProfilePage/ProfilePage";
 import Menu from "./components/Menu/Menu";
-import Search from "./components/Search/Search";
 import AuthPage from "./pages/AuthPage/AuthPage";
-import AuthMenu from "./components/AuthMenu/AuthMenu";
 
 export default function App() {
   let navigate = useNavigate();
