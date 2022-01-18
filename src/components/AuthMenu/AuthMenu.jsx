@@ -2,7 +2,7 @@ import { Route, Routes, Link } from "react-router-dom";
 import React from "react";
 import Search from "../Search/Search";
 
-export default function Menu(props) {
+export default function AuthMenu(props) {
   return (
     <div>
       <nav className="navbar navbar-expand-lg navbar-light bg-light">
@@ -25,37 +25,13 @@ export default function Menu(props) {
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
               <li className="nav-item">
                 <Link to="/" className="nav-link active" aria-current="page">
-                  Home
+                  Login
                 </Link>
-              </li>
-              <li className="nav-item">
-                <Link
-                  to="/profile"
-                  className="nav-link active"
-                  aria-current="page"
-                >
-                  Profile
-                </Link>
-              </li>
-              <li className="nav-item">
-                <Link
-                  to="/mylisting"
-                  className="nav-link active"
-                  aria-current="page"
-                >
-                  My Listing
-                </Link>
-              </li>
-              <li className="nav-item" onClick={() => props.handleLogout()}>
-                <p className="nav-link active" aria-current="page">
-                  Log out
-                </p>
               </li>
             </ul>
           </div>
         </div>
       </nav>
-      <Search />
     </div>
   );
 }
