@@ -32,7 +32,7 @@ export default class App extends Component {
         <Search />
         {this.state.user ? (
           <Routes>
-            <Route path="/" element={<MyListingPage />} />
+            <Route path="/home" element={<MyListingPage />} />
             <Route path="/profile" element={<ProfilePage />} />
           </Routes>
         ) : (
