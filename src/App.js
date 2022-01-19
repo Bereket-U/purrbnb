@@ -1,16 +1,18 @@
 import React, { Component, useState, useEffect } from "react";
 import "./App.css";
-
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, useNavigate } from "react-router-dom";
 import HomePage from "./pages/HomePage/HomePage";
-import MyListingPage from "./pages/MyListingPage/MyListingPage";
+import NewListingPage from "./pages/NewListingPage/NewListingPage";
 import ProfilePage from "./pages/ProfilePage/ProfilePage";
 import Menu from "./components/Menu/Menu";
 import AuthPage from "./pages/AuthPage/AuthPage";
 
-export default class App extends Component {
-  state = {
-    user: null,
+export default function App() {
+  let navigate = useNavigate();
+  const [user, setUser] = useState(null);
+
+  const setUserInState = (incomingUserData) => {
+    setUser({ user: incomingUserData });
   };
   useEffect(() => {
     let token = localStorage.getItem("token");
@@ -34,7 +36,7 @@ export default class App extends Component {
 
           <Routes>
             <Route path="/" element={<HomePage />} />
-            <Route path="/mylisting" element={<MyListingPage />} />
+            <Route path="/listing/new" element={<NewListingPage />} />
             <Route path="/profile" element={<ProfilePage />} />
           </Routes>
         </>

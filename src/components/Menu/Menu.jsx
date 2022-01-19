@@ -19,16 +19,12 @@ export default function Menu(props) {
             <span className="navbar-toggler-icon"></span>
           </button>
           <div className="collapse navbar-collapse" id="navbarTogglerDemo01">
-            <Link to="/home" className="navbar-brand">
+            <Link to="/" className="navbar-brand">
               PurrBnB
             </Link>
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
               <li className="nav-item">
-                <Link
-                  to="/home"
-                  className="nav-link active"
-                  aria-current="page"
-                >
+                <Link to="/" className="nav-link active" aria-current="page">
                   Home
                 </Link>
               </li>
@@ -43,11 +39,11 @@ export default function Menu(props) {
               </li>
               <li className="nav-item">
                 <Link
-                  to="/mylisting"
+                  to="/listing/new"
                   className="nav-link active"
                   aria-current="page"
                 >
-                  My Listing
+                  Add Listing
                 </Link>
               </li>
               <li className="nav-item" onClick={() => props.handleLogout()}>
