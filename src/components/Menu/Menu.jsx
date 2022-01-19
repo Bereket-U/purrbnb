@@ -1,13 +1,14 @@
-import { Route, Routes, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import React from "react";
+import Search from "../Search/Search";
 
-export default function Menu() {
+export default function Menu(props) {
   return (
     <div>
-      <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container-fluid">
+      <nav className="navbar navbar-expand-sm navbar-dark bg-secondary">
+        <div className="container-fluid">
           <button
-            class="navbar-toggler"
+            className="navbar-toggler"
             type="button"
             data-bs-toggle="collapse"
             data-bs-target="#navbarTogglerDemo01"
@@ -15,36 +16,48 @@ export default function Menu() {
             aria-expanded="false"
             aria-label="Toggle navigation"
           >
-            <span class="navbar-toggler-icon"></span>
+            <span className="navbar-toggler-icon"></span>
           </button>
-          <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-            <a class="navbar-brand" href="#">
+          <div className="collapse navbar-collapse" id="navbarTogglerDemo01">
+            <Link to="/" className="navbar-brand">
               PurrBnB
-            </a>
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <Link to="/home" class="nav-link active" aria-current="page">
+            </Link>
+            <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+              <li className="nav-item">
+                <Link to="/" className="nav-link active" aria-current="page">
                   Home
                 </Link>
               </li>
-              <li class="nav-item">
-                <Link to="/profile" class="nav-link active" aria-current="page">
+              <li className="nav-item">
+                <Link
+                  to="/profile"
+                  className="nav-link active"
+                  aria-current="page"
+                >
                   Profile
                 </Link>
               </li>
-              <li class="nav-item">
+              <li className="nav-item">
                 <Link
                   to="/mylisting"
-                  class="nav-link active"
+                  className="nav-link active"
                   aria-current="page"
                 >
                   My Listing
                 </Link>
               </li>
+              <li className="nav-item" onClick={() => props.handleLogout()}>
+                <p className="nav-link active" aria-current="page">
+                  Log out
+                </p>
+              </li>
             </ul>
           </div>
         </div>
       </nav>
+      <br />
+      <Search />
+      <br />
     </div>
   );
 }
