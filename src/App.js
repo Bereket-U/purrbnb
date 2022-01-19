@@ -7,7 +7,6 @@ import ProfilePage from "./pages/ProfilePage/ProfilePage";
 import Menu from "./components/Menu/Menu";
 import AuthPage from "./pages/AuthPage/AuthPage";
 import ShowListing from "./pages/ShowListingPage/ShowListing";
-import { propTypes } from "react-bootstrap/esm/Image";
 
 export default function App() {
   let navigate = useNavigate();
@@ -56,7 +55,10 @@ export default function App() {
               path="/listing/new"
               element={<NewListingPage user={user} setListings={setListings} />}
             />
-            <Route path="/profile" element={<ProfilePage />} />
+            <Route
+              path="/profile"
+              element={<ProfilePage user={user} listings={listings} />}
+            />
             <Route
               path="/listing/:id"
               element={<ShowListing user={user} listings={listings} />}
