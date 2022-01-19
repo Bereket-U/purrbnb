@@ -7,7 +7,7 @@ import ProfilePage from "./pages/ProfilePage/ProfilePage";
 import Menu from "./components/Menu/Menu";
 import AuthPage from "./pages/AuthPage/AuthPage";
 import ShowListing from "./pages/ShowListingPage/ShowListing";
-import { propTypes } from "react-bootstrap/esm/Image";
+
 
 export default function App() {
   let navigate = useNavigate();

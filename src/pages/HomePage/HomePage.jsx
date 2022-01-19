@@ -52,51 +52,20 @@ export default function HomePage(props) {
                 </button>
             </div>
         </div>
-      
-       <div className='home__section'>
-         {props.listings.map( listing => (
-          <Link to = {`/listing/${listing._id}`}>
-      <Card 
-         src={listing.image}
-         title={listing.title}
-         price={`$${listing.price}/night`}
-         description={listing.description}
-      />
-      </Link>
-         
-         ))}
-         <Link to = '/listing/1'>
-      <Card 
-         src="/images/CatT.png"
-         title="Tent house"
-         price="$50/night"
-         description="Unique mysterious tent."
-      />
-      </Link>
-      <Card
-        src="/images/CatM.png"
-        title="Entire white home"
-        price="$70/night"
-        description="Comfortable private room for  white cats."
-      />
-      </div>
-      <div className='home__section'>
-      <Card
-        src="/images/CatP.png"
-        title="Penthouse in Downtown"
-        price="$150/night"
-        description="Superhost with great amenities."
-        />
-      <Card 
-        src="images/CatH.png"
-        title="Hidden Hills Mansion"
-        price="$250/night"
-        description="Private spacious hidden galor."
-        />
-      
-    
-      </div>
+          <div className="cardContainer">
+            {props.listings.map((listing) => (
+            <div className="home__section">
+              <Link to={`/listing/${listing._id}`}>
+                <Card
+                  src={listing.image}
+                  title={listing.title}
+                  price={`$${listing.price}/night`}
+                  description={listing.description}
+                />
+              </Link>
+            </div>
+            ))}
+          </div>  
     </div>
   );
 }
-

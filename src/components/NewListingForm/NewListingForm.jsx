@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import "./NewListingForm.css";
 
 export default class NewListingForm extends Component {
   state = {
@@ -53,10 +54,14 @@ export default class NewListingForm extends Component {
   render() {
     return (
       <div>
-        <h1>New Listing Page</h1>
-        <p className="">&nbsp;{this.state.message}</p>
+        
+        
         <div className="form-container">
           <form autoComplete="off" onSubmit={this.handleSubmit}>
+
+          <h1>New Listing</h1>
+
+          <label>Title</label>
             <input
               type="text"
               name="title"
@@ -65,6 +70,7 @@ export default class NewListingForm extends Component {
               onChange={this.handleChange}
               required
             />
+            <label>Type</label>
             <select
               name="type"
               onChange={this.handleChange}
@@ -77,14 +83,16 @@ export default class NewListingForm extends Component {
               <option value="Apartment">Apartment</option>
             </select>
 
+            <label>Price</label>
             <input
               type="number"
               name="price"
-              placeholder="price"
+              placeholder="Price"
               value={this.state.price}
               onChange={this.handleChange}
               required
             />
+
             <label>Description</label>
             <textarea
               type="text"
@@ -95,6 +103,7 @@ export default class NewListingForm extends Component {
               required
             ></textarea>
 
+            <label>Image URL</label>
             <input
               type="text"
               name="image"
@@ -103,7 +112,9 @@ export default class NewListingForm extends Component {
               onChange={this.handleChange}
               required
             />
-            <button type="submit">ADD LISTING</button>
+            
+            <button className="btn btn-success" type="submit">ADD LISTING</button>
+            <h2 className="">&nbsp;{this.state.message}</h2>
           </form>
         </div>
       </div>
