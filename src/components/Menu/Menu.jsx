@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import React from "react";
 import Search from "../Search/Search";
-import './Menu.css';
+import "./Menu.css";
 
 export default function Menu(props) {
   return (
@@ -31,20 +31,20 @@ export default function Menu(props) {
               </li>
               <li className="nav-item">
                 <Link
-                  to="/profile"
-                  className="nav-link active"
-                  aria-current="page"
-                >
-                  Profile
-                </Link>
-              </li>
-              <li className="nav-item">
-                <Link
                   to="/listing/new"
                   className="nav-link active"
                   aria-current="page"
                 >
                   Add Listing
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link
+                  to="/profile"
+                  className="nav-link active"
+                  aria-current="page"
+                >
+                  {props.user.name}
                 </Link>
               </li>
               <li className="nav-item" onClick={() => props.handleLogout()}>
