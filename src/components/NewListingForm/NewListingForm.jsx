@@ -28,6 +28,7 @@ export default class NewListingForm extends Component {
           price: this.state.price,
           description: this.state.description,
           image: this.state.image,
+          user: this.props.user._id,
         }),
       });
 
@@ -42,6 +43,8 @@ export default class NewListingForm extends Component {
           image: "",
           message: "Listing Created Successfully!",
         });
+        const response = await fetchResponse.json()
+        this.props.setListings (response)
       }
     } catch (err) {
       this.setState({ message: "Failed - Please Try Again" });
