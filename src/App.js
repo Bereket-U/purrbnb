@@ -18,7 +18,7 @@ function App() {
       <Routes>
         <Route path="/home" element={<HomePage />} />
         <Route path="/profile" element={<ProfilePage />} />
-        <Route path="/mylisting" element={<MyListingPage />} />
+        <Route path="/mylisting/:id" element={<MyListingPage />} />
       </Routes>
     </div>
   );

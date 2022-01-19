@@ -1,6 +1,7 @@
 import React from "react";
 import Card from '../../components/Card/Card'
 import "./HomePage.css";
+import { Link } from "react-router-dom";
 
 export default function HomePage() {
   return (
@@ -53,12 +54,14 @@ export default function HomePage() {
         </div>
       
        <div className='home__section'>
+         <Link to = '/mylisting/1'>
       <Card 
          src="/images/CatT.png"
          title="Tent house"
          price="$50/night"
          description="Unique mysterious tent."
       />
+      </Link>
       <Card
         src="/images/CatM.png"
         title="Entire white home"
