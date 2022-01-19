@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import React from "react";
 import Search from "../Search/Search";
+import './Menu.css';
 
 export default function Menu(props) {
   return (
