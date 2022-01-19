@@ -1,33 +1,26 @@
-import React from 'react';
+import React from "react";
 import { useParams } from "react-router-dom";
 
 export default function ShowListing(props) {
- let id = useParams().id;
- let listing = props.listings.find(listing => listing._id === id)
+  let id = useParams().id;
+  let listing = props.listings.find((listing) => listing._id === id);
 
- 
- const handleDelete = () => {
+  const handleDelete = () => {
+    alert("Delete");
+  };
 
-     alert("Delete")
- }
- 
- 
- return <div>
+  return (
+    <div>
       ShowListing
       <img src={listing.image} alt=""/>
       <p>{listing.title}</p>
       <p>{listing.price}</p>
       <p>{listing.description}</p>
-
-{props.user._id === listing.user?
-
-<button onClick={()=> handleDelete()}>Delete</button>
-:
-<> </> 
-
-}
-
-
-
-  </div>;
+      {props.user._id === listing.user ? (
+        <button onClick={() => handleDelete()}>Delete</button>
+      ) : (
+        <> </>
+      )}
+    </div>
+  );
 }
