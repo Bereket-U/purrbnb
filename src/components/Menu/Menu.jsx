@@ -1,10 +1,11 @@
-import { Route, Routes, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import React from "react";
+import Search from "../Search/Search";
 
-export default function Menu() {
+export default function Menu(props) {
   return (
     <div>
-      <nav className="navbar navbar-expand-lg navbar-light bg-light">
+      <nav className="navbar navbar-expand-sm navbar-dark bg-secondary">
         <div className="container-fluid">
           <button
             className="navbar-toggler"
@@ -18,9 +19,9 @@ export default function Menu() {
             <span className="navbar-toggler-icon"></span>
           </button>
           <div className="collapse navbar-collapse" id="navbarTogglerDemo01">
-            <a className="navbar-brand" href="#">
+            <Link to="/home" className="navbar-brand">
               PurrBnB
-            </a>
+            </Link>
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
               <li className="nav-item">
                 <Link
@@ -49,10 +50,18 @@ export default function Menu() {
                   My Listing
                 </Link>
               </li>
+              <li className="nav-item" onClick={() => props.handleLogout()}>
+                <p className="nav-link active" aria-current="page">
+                  Log out
+                </p>
+              </li>
             </ul>
           </div>
         </div>
       </nav>
+      <br />
+      <Search />
+      <br />
     </div>
   );
 }
