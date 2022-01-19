@@ -39,11 +39,11 @@ export default function Menu(props) {
               </li>
               <li className="nav-item">
                 <Link
-                  to="/mylisting"
+                  to="/listing/new"
                   className="nav-link active"
                   aria-current="page"
                 >
-                  My Listing
+                  Add Listing
                 </Link>
               </li>
               <li className="nav-item" onClick={() => props.handleLogout()}>
