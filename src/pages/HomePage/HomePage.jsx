@@ -3,7 +3,7 @@ import Card from '../../components/Card/Card'
 import "./HomePage.css";
 import { Link } from "react-router-dom";
 
-export default function HomePage() {
+export default function HomePage(props) {
   return (
     <div>
         <div className="carouselContainer">
@@ -54,7 +54,18 @@ export default function HomePage() {
         </div>
       
        <div className='home__section'>
-         <Link to = '/mylisting/1'>
+         {props.listings.map( listing => (
+          <Link to = {`/listing/${listing._id}`}>
+      <Card 
+         src={listing.image}
+         title={listing.title}
+         price={`$${listing.price}/night`}
+         description={listing.description}
+      />
+      </Link>
+         
+         ))}
+         <Link to = '/listing/1'>
       <Card 
          src="/images/CatT.png"
          title="Tent house"
