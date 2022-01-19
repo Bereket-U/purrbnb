@@ -47,9 +47,9 @@ export default function Menu(props) {
                 </Link>
               </li>
               <li className="nav-item" onClick={() => props.handleLogout()}>
-                <p className="nav-link active" aria-current="page">
+                <Link to="/" className="nav-link active" aria-current="page">
                   Log out
-                </p>
+                </Link>
               </li>
             </ul>
           </div>
