@@ -8,6 +8,10 @@ import Menu from "./components/Menu/Menu";
 import AuthPage from "./pages/AuthPage/AuthPage";
 import ShowListing from "./pages/ShowListingPage/ShowListing";
 
+
+
+
+
 export default function App() {
   let navigate = useNavigate();
   const [user, setUser] = useState(null);

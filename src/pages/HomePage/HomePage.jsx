@@ -65,87 +65,22 @@ export default function HomePage(props) {
             </div>
           </div>
         </div>
-        <button
-          className="carousel-control-prev"
-          type="button"
-          data-bs-target="#carouselExampleCaptions"
-          data-bs-slide="prev"
-        >
-          <span
-            className="carousel-control-prev-icon"
-            aria-hidden="true"
-          ></span>
-          <span className="visually-hidden">Previous</span>
-        </button>
-        <button
-          className="carousel-control-next"
-          type="button"
-          data-bs-target="#carouselExampleCaptions"
-          data-bs-slide="next"
-        >
-          <span
-            className="carousel-control-next-icon"
-            aria-hidden="true"
-          ></span>
-          <span className="visually-hidden">Next</span>
-        </button>
-      </div>
-
-      <div className="home__section">
-        {props.listings.map((listing) => (
-          <Link to={`/listing/${listing._id}`}>
-            <Card
-              src={listing.image}
-              title={listing.title}
-              price={`$${listing.price}/night`}
-              description={listing.description}
-            />
-          </Link>
-        ))}
-        <Link to="/listing/1">
-          <Card
-            src="/images/CatT.png"
-            title="Tent house"
-            price="$50/night"
-            description="Unique mysterious tent."
-          />
-        </Link>
-        <Card
-          src="/images/CatM.png"
-          title="Entire white home"
-          price="$70/night"
-          description="Comfortable private room for  white cats."
-        />
-      </div>
-
-      <div className="home__section">
-        <Card
-          src="/images/CatT.png"
-          title="Tent house"
-          price="$50/night"
-          description="Unique mysterious tent."
-        />
-        <Card
-          src="/images/CatM.png"
-          title="Entire white home"
-          price="$70/night"
-          description="Comfortable private room for  white cats."
-        />
-      </div>
-      <div className="home__section">
-        <Card
-          src="/images/CatP.png"
-          title="Penthouse in Downtown"
-          price="$150/night"
-          description="Superhost with great amenities."
-        />
-        <Card
-          src="images/CatH.png"
-          title="Hidden Hills Mansion"
-          price="$250/night"
-          description="Private spacious hidden galor."
-        />
-      </div>
-    </div>
+          <div className="cardContainer">
+            {props.listings.map((listing) => (
+            <div className="home__section">
+              <Link to={`/listing/${listing._id}`}>
+                <Card
+                  src={listing.image}
+                  title={listing.title}
+                  price={`$${listing.price}/night`}
+                  description={listing.description}
+                />
+              </Link>
+            </div>
+            ))}
+          </div>  
+          </div>    
+          </div>
   );
+ 
 }
