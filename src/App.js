@@ -7,10 +7,7 @@ import ProfilePage from "./pages/ProfilePage/ProfilePage";
 import Menu from "./components/Menu/Menu";
 import AuthPage from "./pages/AuthPage/AuthPage";
 import ShowListing from "./pages/ShowListingPage/ShowListing";
-
-
-
-
+import SearchResultsPage from "./pages/SearchResultsPage/SearchResultsPage";
 
 export default function App() {
   let navigate = useNavigate();
@@ -63,9 +60,16 @@ export default function App() {
               path="/profile"
               element={<ProfilePage user={user} listings={listings} />}
             />
+            <Route path="/search" element={<SearchResultsPage />} />
             <Route
               path="/listing/:id"
-              element={<ShowListing user={user} listings={listings} />}
+              element={
+                <ShowListing
+                  user={user}
+                  listings={listings}
+                  setListings={setListings}
+                />
+              }
             />
           </Routes>
         </>
