@@ -2,6 +2,7 @@
   text-align: center;
   background-color: whitesmoke;
   height: 100vh;
+  
 }
 
 html {
@@ -53,6 +54,7 @@ html {
   min-height: 300px;
   max-height: 800px;
   margin: 0 auto;
+  margin-top: 15vh;
   border-radius: 20px;
   background-color: rgb(146, 145, 145);
   align-items: center;
@@ -97,6 +99,7 @@ html {
 .Login-container form button {
   width: 20vw;
   max-width: 400px;
+  min-width: 100px;
   margin: 0 auto;
   margin-top: 20px;
   padding: 10px 10px;
@@ -115,6 +118,7 @@ html {
   min-height: 300px;
   max-height: 800px;
   margin: 0 auto;
+  margin-top: 10vh;
   border-radius: 20px;
   background-color: rgb(146, 145, 145);
   align-items: center;
@@ -160,6 +164,7 @@ html {
 .signup-container form button {
   width: 20vw;
   max-width: 400px;
+  min-width: 100px;
   margin: 0 auto;
   margin-top: 20px;
   margin-bottom: 20px;
