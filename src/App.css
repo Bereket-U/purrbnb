@@ -2,12 +2,16 @@
   text-align: center;
   background-color: whitesmoke;
   height: 100vh;
+ 
+  margin: 0 auto;
   
 }
 
 html {
   background-color: whitesmoke;
   height: 100vh;
+ 
+  margin: 0 auto;
 }
 
 .App-logo {
@@ -182,7 +186,7 @@ html {
 footer {
   background-color: rgb(146, 145, 145);
   color: white;
-  position: fixed;
+  bottom: -120;
   width: 100%;
   left: 0;
   bottom: 0;
