@@ -7,31 +7,29 @@ import ProfilePage from "./pages/ProfilePage/ProfilePage";
 import Menu from "./components/Menu/Menu";
 import AuthPage from "./pages/AuthPage/AuthPage";
 import ShowListing from "./pages/ShowListingPage/ShowListing";
+import SearchResultsPage from "./pages/SearchResultsPage/SearchResultsPage";
 
 
 export default function App() {
   let navigate = useNavigate();
   const [user, setUser] = useState(null);
-  
-  const [listings, setListings]=useState([]);
-    
+
+  const [listings, setListings] = useState([]);
+
   const setUserInState = (incomingUserData) => {
     setUser({ user: incomingUserData });
   };
 
   const getListings = async () => {
-    const fetchResponse = await fetch("/api/listings")
-    const response = await fetchResponse.json()
+    const fetchResponse = await fetch("/api/listings");
+    const response = await fetchResponse.json();
     console.log(response);
-     setListings(response)
-  }
+    setListings(response);
+  };
 
-  useEffect (() => {
-     getListings ()
-  },[]);
-  
-
-
+  useEffect(() => {
+    getListings();
+  }, []);
 
   useEffect(() => {
     let token = localStorage.getItem("token");
@@ -51,14 +49,29 @@ export default function App() {
     <div className="App">
       {user ? (
         <>
-          <Menu handleLogout={handleLogout} />
+          <Menu handleLogout={handleLogout} user={user} />
 
           <Routes>
-            <Route path="/" element={<HomePage listings={listings}/>} />
-            <Route path="/listing/new" element={<NewListingPage user={user} setListings={setListings}/>} />
-            <Route path="/profile" element={<ProfilePage />} />
-            <Route path="/listing/:id" element={<ShowListing user={user}
-            listings={listings} />} />
+            <Route path="/" element={<HomePage listings={listings} />} />
+            <Route
+              path="/listing/new"
+              element={<NewListingPage user={user} setListings={setListings} />}
+            />
+            <Route
+              path="/profile"
+              element={<ProfilePage user={user} listings={listings} />}
+            />
+            <Route path="/search" element={<SearchResultsPage />} />
+            <Route
+              path="/listing/:id"
+              element={
+                <ShowListing
+                  user={user}
+                  listings={listings}
+                  setListings={setListings}
+                />
+              }
+            />
           </Routes>
         </>
       ) : (
@@ -70,12 +83,9 @@ export default function App() {
             />
           </Routes>
 
-
-
           {/* <AuthPage setUserInState={this.setUserInState} /> */}
         </>
       )}
-      
     </div>
   );
 }

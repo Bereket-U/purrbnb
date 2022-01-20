@@ -1,9 +1,10 @@
 import React from "react";
+import UserListings from "../../components/UserListings/UserListings";
 
-export default function ProfilePage() {
+export default function ProfilePage(props) {
   return (
     <div>
-      <h1>Profile Page</h1>
+      <UserListings user={props.user} listings={props.listings} />
     </div>
   );
 }
