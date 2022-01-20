@@ -49,19 +49,138 @@ html {
 Link {
   color: black;
 }
-.login-form {
-  color: white;
-  background-color: rgb(146, 145, 145);
-  margin: 0 auto;
-  max-width: 400px;
+
+.Login-container form {
+  display: inline-block;
+  flex-direction: column;
+  width: 40vw;
+  max-width: 600px;
   min-width: 300px;
+  min-height: 300px;
+  max-height: 800px;
+  margin: 0 auto;
+  margin-top: 15vh;
+  border-radius: 20px;
+  background-color: rgb(146, 145, 145);
+  align-items: center;
+  justify-content: center;
 }
-@media screen and (max-with = 600px) {
-  .login-form {
-    min-width: 400px;
-  }
+.Login-container form h1 {
+  color: white;
+  padding-top: 40px;
 }
+
+.Login-container form h2,
+h3 {
+  color: rgb(255, 255, 255);
+  padding: 10px;
+}
+
+.Login-container span {
+  font-weight: bold;
+}
+
+.Login-container form label {
+  color: white;
+  padding: 10px;
+  font-size: 18px;
+  font-weight: bold;
+}
+.Login-container form input,
+select {
+  width: 30vw;
+  max-width: 500px;
+  height: 30px;
+  min-width: 250px;
+  margin: 0 20px;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  background-color: #f8f8f8;
+}
+
+.Login-container form button {
+  width: 20vw;
+  max-width: 400px;
+  min-width: 100px;
+  margin: 0 auto;
+  margin-top: 20px;
+  padding: 10px 10px;
+}
+.signup-login {
+  color: rgb(146, 145, 145);
+}
+
+.signup-container form {
+  display: flex;
+  flex-direction: column;
+  width: 40vw;
+  max-width: 600px;
+  min-width: 300px;
+  min-height: 300px;
+  max-height: 800px;
+  margin: 0 auto;
+  margin-top: 10vh;
+  border-radius: 20px;
+  background-color: rgb(146, 145, 145);
+  align-items: center;
+  justify-content: center;
+}
+
+.signup-container form h1 {
+  color: white;
+  padding-top: 40px;
+}
+
+.signup-container form h2,
+h3 {
+  color: rgb(255, 255, 255);
+  padding: 10px;
+}
+
+.signup-container span {
+  font-weight: bold;
+}
+
+.signup-container form label {
+  color: white;
+  padding: 10px;
+  font-size: 18px;
+  font-weight: bold;
+}
+.signup-container form input,
+select {
+  width: 30vw;
+  max-width: 500px;
+  height: 30px;
+  min-width: 250px;
+  margin: 0 20px;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  background-color: #f8f8f8;
+}
+
+.signup-container form button {
+  width: 20vw;
+  max-width: 400px;
+  min-width: 100px;
+  margin: 0 auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 10px 10px;
+}
+
 .signup-login:hover {
   cursor: pointer;
   font-weight: bold;
+}
+footer {
+  background-color: rgb(146, 145, 145);
+  color: white;
+  position: fixed;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  text-align: center;
+  padding-top: 7px;
+  height: 40px;
 }

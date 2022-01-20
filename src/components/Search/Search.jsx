@@ -11,7 +11,7 @@ export default function Search() {
   return (
     <div className="d-flex justify-content-center search ">
       <input
-        className="form-control me-3"
+        className=""
         type="search"
         placeholder="Search"
         aria-label="Search"

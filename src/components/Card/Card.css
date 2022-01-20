@@ -17,6 +17,9 @@
   width: 300px;
   height: 200px;
 }
+h3 {
+  color: black;
+}
 
 .card__info {
   margin-top: -9px;
