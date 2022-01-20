@@ -5,7 +5,7 @@ import React from "react";
 export default function AuthMenu(props) {
   return (
     <div>
-      <nav className="navbar navbar-expand-lg navbar-light bg-light">
+      <nav className="navbar navbar-expand-sm navbar-dark bg-secondary">
         <div className="container-fluid">
           <button
             className="navbar-toggler"

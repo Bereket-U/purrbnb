@@ -95,7 +95,7 @@ export default class NewListingForm extends Component {
     return (
       <div>
         {!this.props.editMode && <h1>New Listing Page</h1>}
-
+        <p className="">&nbsp;{this.state.message}</p>
         <div className="form-container">
           <form autoComplete="off" onSubmit={this.handleSubmit}>
             <h1>New Listing</h1>
@@ -151,10 +151,8 @@ export default class NewListingForm extends Component {
               onChange={this.handleChange}
               required
             />
-            <button type="submit">{this.generateSubmitButtonTitle()}</button>
-
             <button className="btn btn-success" type="submit">
-              ADD LISTING
+              {this.generateSubmitButtonTitle()}
             </button>
             <h2 className="">&nbsp;{this.state.message}</h2>
           </form>
