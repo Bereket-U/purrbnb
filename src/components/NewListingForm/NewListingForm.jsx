@@ -104,16 +104,22 @@ export default class NewListingForm extends Component {
             ></textarea>
 
             <label>Image URL</label>
-            <input
+            <div className="imgUpContainer">
+              <input type="file" className="form-control" id="inputGroupFile04" aria-describedby="inputGroupFileAddon04" aria-label="Upload"/>
+              <button className="btn btn-secondary" type="button" id="inputGroupFileAddon04">Add Image</button>
+            </div> 
+
+
+            {/* <input
               type="text"
               name="image"
               placeholder="Image URL"
               value={this.state.image}
               onChange={this.handleChange}
               required
-            />
+            /> */}
             
-            <button className="btn btn-success" type="submit">ADD LISTING</button>
+            <button className="btn btn-success" type="submit">Add Listing</button>
             <h2 className="">&nbsp;{this.state.message}</h2>
           </form>
         </div>
