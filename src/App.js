@@ -9,6 +9,7 @@ import AuthPage from "./pages/AuthPage/AuthPage";
 import ShowListing from "./pages/ShowListingPage/ShowListing";
 import SearchResultsPage from "./pages/SearchResultsPage/SearchResultsPage";
 
+
 export default function App() {
   let navigate = useNavigate();
   const [user, setUser] = useState(null);
