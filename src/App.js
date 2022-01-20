@@ -9,6 +9,7 @@ import AuthPage from "./pages/AuthPage/AuthPage";
 import ShowListing from "./pages/ShowListingPage/ShowListing";
 import SearchResultsPage from "./pages/SearchResultsPage/SearchResultsPage";
 
+
 export default function App() {
   let navigate = useNavigate();
   const [user, setUser] = useState(null);
@@ -16,7 +17,7 @@ export default function App() {
   const [listings, setListings] = useState([]);
 
   const setUserInState = (incomingUserData) => {
-    setUser({ user: incomingUserData });
+    setUser(incomingUserData);
   };
 
   const getListings = async () => {
@@ -28,15 +29,20 @@ export default function App() {
 
   useEffect(() => {
     getListings();
-  }, []);
-
-  useEffect(() => {
     let token = localStorage.getItem("token");
     if (token) {
       let userDoc = JSON.parse(atob(token.split(".")[1])).user;
       setUser(userDoc);
     }
   }, []);
+
+  // useEffect(() => {
+  //   let token = localStorage.getItem("token");
+  //   if (token) {
+  //     let userDoc = JSON.parse(atob(token.split(".")[1])).user;
+  //     setUser(userDoc);
+  //   }
+  // }, []);
 
   const handleLogout = () => {
     setUser(null);
@@ -85,6 +91,7 @@ export default function App() {
           {/* <AuthPage setUserInState={this.setUserInState} /> */}
         </>
       )}
+      <footer className="footer">PurrBnB ©</footer>
     </div>
   );
 }

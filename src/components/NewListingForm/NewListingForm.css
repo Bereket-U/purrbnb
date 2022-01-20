@@ -1,63 +1,62 @@
 .form-container form {
-  display: flex;  
+  display: flex;
   flex-direction: column;
-  max-width:40vw;
+  max-width: 40vw;
   min-width: 300px;
   min-height: 500px;
   max-height: 800px;
   margin: 0 auto;
   border-radius: 20px;
   background-color: rgb(146, 145, 145);
+  align-items: center;
+  justify-content: center;
+
+
 }
 
 .form-container form h1 {
-    color: white;
-    padding-top: 40px;;
+  color: white;
+  padding-top: 40px;
 }
 
 .form-container form h2 {
-    color: rgb(255, 255, 255);
-    padding: 10px;
-    
+  color: rgb(255, 255, 255);
+  padding: 10px;
 }
 
 .form-container form label {
-    color: white;
-    padding: 10px;
-    font-size: 18px;
-    font-weight: bold;
-
+  color: white;
+  padding: 10px;
+  font-size: 18px;
+  font-weight: bold;
 }
-.form-container form input, select {
-    width: 30vw;
-    height: 30px;
-    min-width: 250px;
-    margin: 0 auto;
-    border: 2px solid #ccc;
-    border-radius: 4px;
-     background-color: #f8f8f8;
+.form-container form input,
+select {
+  width: 30vw;
+  height: 30px;
+  min-width: 250px;
+  margin: 0 auto;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  background-color: #f8f8f8;
 }
-
 
 .form-container form textarea {
-    width: 30vw;
-    min-height: 40px;
-    min-width: 250px;
-    margin: 0 auto;
-    padding: 10px 10px;
-    box-sizing: border-box;
-    border: 2px solid #ccc;
-    border-radius: 4px;
-    background-color: #f8f8f8;
-    font-size: 16px;
-    resize:vertical;
-
+  width: 30vw;
+  min-height: 40px;
+  min-width: 250px;
+  margin: 0 auto;
+  padding: 10px 10px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  background-color: #f8f8f8;
+  font-size: 16px;
+  resize: vertical;
 }
 .form-container form button {
-    width: 20vw;
-    margin: 0 auto;
-    margin-top: 20px;
-    padding: 10px 10px;
-
+  width: 20vw;
+  margin: 0 auto;
+  margin-top: 20px;
+  padding: 10px 10px;
 }
-

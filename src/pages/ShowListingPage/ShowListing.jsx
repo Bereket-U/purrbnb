@@ -47,7 +47,9 @@ export default function ShowListing(props) {
   return (
     <div>
       ShowListing
+      
       <img src={listing.image} alt="" />
+
       <p>{listing.title}</p>
       <p>{listing.price}</p>
       <p>{listing.description}</p>

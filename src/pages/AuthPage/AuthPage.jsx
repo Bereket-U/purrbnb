@@ -12,22 +12,26 @@ export default class AuthPage extends React.Component {
   render() {
     return (
       <main className="AuthPage">
-        <AuthMenu />
-        <div>
-          <h3
-            onClick={() => this.setState({ showLogin: !this.state.showLogin })}
-          >
-            {this.state.showLogin ? "SIGN UP" : "LOG IN"}
-          </h3>
-        </div>
+        
+            <AuthMenu />
+          <div className="form-center-cont">    
+            <br />
 
-        {/* Another ternary operator! */}
-        {/* If showLogin is true, show the login form. If false, show the signup form */}
-        {this.state.showLogin ? (
-          <LoginForm setUserInState={this.props.setUserInState} />
-        ) : (
-          <SignUpForm setUserInState={this.props.setUserInState} />
-        )}
+            {/* Another ternary operator! */}
+            {/* If showLogin is true, show the login form. If false, show the signup form */}
+            {this.state.showLogin ? (
+              <LoginForm setUserInState={this.props.setUserInState} />
+            ) : (
+              <SignUpForm setUserInState={this.props.setUserInState} />
+            )}
+
+            <h3
+              className="signup-login"
+              onClick={() => this.setState({ showLogin: !this.state.showLogin })}
+            >
+              {this.state.showLogin ? "Don't have an account? Signup" : "Log in"}
+            </h3>
+          </div>      
       </main>
     );
   }
