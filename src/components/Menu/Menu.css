@@ -1,0 +1,15 @@
+.nav-item {
+  font-size: 17px;
+  transition: font-weight 0.1s;
+  transition-timing-function: linear;
+  padding: 0 15px 0 15px;
+}
+
+.nav-item:hover {
+  font-size: 17px;
+  font-weight: 800;
+}
+
+.navbar-brand {
+  font-weight: bold;
+}
