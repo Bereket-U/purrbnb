@@ -174,14 +174,20 @@ html {
 }
 
 
-
-@media screen and (max-with = 600px) {
-  .login-form {
-    min-width: 400px;
-  }
-}
 .signup-login:hover {
   cursor: pointer;
   font-weight: bold;
   
+}
+footer {
+  background-color: rgb(146, 145, 145);
+  color: white;
+  position: fixed;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  text-align: center;
+  padding-top: 7px;
+  height: 40px;
+
 }
