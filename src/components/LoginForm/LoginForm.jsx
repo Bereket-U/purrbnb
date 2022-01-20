@@ -45,40 +45,32 @@ export default class SignUpForm extends Component {
     return (
       <div>
         <div class="container">
-          <div class="row">
-            <div class="col">
-              <div className="form-container" onSubmit={this.handleSubmit}>
-                <form autoComplete="off">
-                  <label>Email</label>
-                  <br />
-                  <input
-                    type="text"
-                    name="email"
-                    value={this.state.email}
-                    onChange={this.handleChange}
-                    required
-                  />
-                  <br />
-                  <label>Password</label>
-                  <br />
-                  <input
-                    type="password"
-                    name="password"
-                    value={this.state.password}
-                    onChange={this.handleChange}
-                    required
-                  />
-                  <br />
-                  <button type="submit">LOG IN</button>
-                </form>
-              </div>
-              <p className="error-message">&nbsp;{this.state.error}</p>
-            </div>
-            <div class="col">
-              <p>image</p>
-              <p className="error-message">&nbsp;{this.state.error}</p>
-            </div>
+          <div className="form-container" onSubmit={this.handleSubmit}>
+            <form autoComplete="off">
+              <label>Email</label>
+              <br />
+              <input
+                type="text"
+                name="email"
+                value={this.state.email}
+                onChange={this.handleChange}
+                required
+              />
+              <br />
+              <label>Password</label>
+              <br />
+              <input
+                type="password"
+                name="password"
+                value={this.state.password}
+                onChange={this.handleChange}
+                required
+              />
+              <br />
+              <button type="submit">LOG IN</button>
+            </form>
           </div>
+          <p className="error-message">&nbsp;{this.state.error}</p>
         </div>
       </div>
     );
