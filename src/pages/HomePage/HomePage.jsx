@@ -104,18 +104,22 @@ export default function HomePage(props) {
           </button>
         </div>
       </div>
-
-      <div className="home__section">
-        {props.listings.map((listing) => (
-          <Link key={listing._id} to={`/listing/${listing._id}`}>
-            <Card
-              src={listing.image}
-              title={listing.title}
-              price={`$${listing.price}/night`}
-              description={listing.description}
-            />
-          </Link>
-        ))}
+      <div class="row">
+        <div class="col-8">
+          <div className="home__section d-flex flex-wrap">
+            {props.listings.map((listing) => (
+              <Link key={listing._id} to={`/listing/${listing._id}`}>
+                <Card
+                  src={listing.image}
+                  title={listing.title}
+                  price={`$${listing.price}/night`}
+                  description={listing.description}
+                />
+              </Link>
+            ))}
+          </div>
+        </div>
+        <div class="col-4">Column</div>
       </div>
     </div>
   );
