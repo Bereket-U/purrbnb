@@ -104,22 +104,33 @@ export default function HomePage(props) {
           </button>
         </div>
       </div>
-      <div class="row">
-        <div class="col-8">
-          <div className="home__section d-flex flex-wrap">
-            {props.listings.map((listing) => (
-              <Link key={listing._id} to={`/listing/${listing._id}`}>
-                <Card
-                  src={listing.image}
-                  title={listing.title}
-                  price={`$${listing.price}/night`}
-                  description={listing.description}
-                />
-              </Link>
-            ))}
+      <br />
+      <br />
+
+      <div className="container">
+        <div className="row">
+          <div className="col">
+            <div className="d-flex flex-wrap">
+              {props.listings.map((listing) => (
+                <Link
+                  className="test"
+                  key={listing._id}
+                  to={`/listing/${listing._id}`}
+                >
+                  <Card
+                    src={listing.image}
+                    title={listing.title}
+                    price={`$${listing.price}/night`}
+                    description={listing.description}
+                  />
+                </Link>
+              ))}
+            </div>
+          </div>
+          <div className="c col-5 block-map ">
+            <img className="map fixed-map" src="/images/map.png" />
           </div>
         </div>
-        <div class="col-4">Column</div>
       </div>
     </div>
   );

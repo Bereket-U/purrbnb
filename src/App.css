@@ -32,7 +32,7 @@ html {
 }
 
 .App-link {
-  color: #61dafb;
+  color: black;
 }
 
 @keyframes App-logo-spin {
@@ -43,7 +43,12 @@ html {
     transform: rotate(360deg);
   }
 }
-
+.search {
+  margin-top: 50px;
+}
+Link {
+  color: black;
+}
 .login-form {
   color: white;
   background-color: rgb(146, 145, 145);

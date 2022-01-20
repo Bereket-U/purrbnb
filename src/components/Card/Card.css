@@ -24,8 +24,11 @@
   padding: 20px;
   padding-top: 20px;
   border: 1;
+  color: black;
 }
-
+.test {
+  text-decoration: none;
+}
 .card__info > h2 {
   text-decoration: none;
   font-size: 18px;

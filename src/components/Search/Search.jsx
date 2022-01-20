@@ -9,7 +9,7 @@ export default function Search() {
   };
 
   return (
-    <div className="d-flex justify-content-center">
+    <div className="d-flex justify-content-center search ">
       <input
         className="form-control me-3"
         type="search"
