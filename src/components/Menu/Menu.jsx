@@ -44,7 +44,7 @@ export default function Menu(props) {
                   className="nav-link active"
                   aria-current="page"
                 >
-                  {props.user.name}
+                  <span>{props.user.name}</span>
                 </Link>
               </li>
               <li className="nav-item" onClick={() => props.handleLogout()}>

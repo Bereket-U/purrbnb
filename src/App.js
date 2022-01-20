@@ -16,7 +16,7 @@ export default function App() {
   const [listings, setListings] = useState([]);
 
   const setUserInState = (incomingUserData) => {
-    setUser({ user: incomingUserData });
+    setUser(incomingUserData);
   };
 
   const getListings = async () => {
@@ -28,15 +28,20 @@ export default function App() {
 
   useEffect(() => {
     getListings();
-  }, []);
-
-  useEffect(() => {
     let token = localStorage.getItem("token");
     if (token) {
       let userDoc = JSON.parse(atob(token.split(".")[1])).user;
       setUser(userDoc);
     }
   }, []);
+
+  // useEffect(() => {
+  //   let token = localStorage.getItem("token");
+  //   if (token) {
+  //     let userDoc = JSON.parse(atob(token.split(".")[1])).user;
+  //     setUser(userDoc);
+  //   }
+  // }, []);
 
   const handleLogout = () => {
     setUser(null);
