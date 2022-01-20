@@ -2,11 +2,16 @@
   text-align: center;
   background-color: whitesmoke;
   height: 100vh;
+ 
+  margin: 0 auto;
+  
 }
 
 html {
   background-color: whitesmoke;
   height: 100vh;
+ 
+  margin: 0 auto;
 }
 
 .App-logo {
@@ -174,7 +179,7 @@ select {
   font-weight: bold;
 }
 footer {
-  background-color: rgb(146, 145, 145);
+  background-color: #6C757D;
   color: white;
   position: fixed;
   width: 100%;
