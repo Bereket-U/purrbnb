@@ -30,6 +30,7 @@
 }
 .form-container form input, select {
     width: 30vw;
+    height: 30px;
     min-width: 250px;
     margin: 0 auto;
     border: 2px solid #ccc;
@@ -37,8 +38,10 @@
      background-color: #f8f8f8;
 }
 
+
 .form-container form textarea {
     width: 30vw;
+    min-height: 40px;
     min-width: 250px;
     margin: 0 auto;
     padding: 10px 10px;
@@ -51,9 +54,10 @@
 
 }
 .form-container form button {
-    width: 30vw;
+    width: 20vw;
     margin: 0 auto;
     margin-top: 20px;
     padding: 10px 10px;
 
 }
+
