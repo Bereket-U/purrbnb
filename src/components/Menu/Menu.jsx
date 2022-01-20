@@ -31,20 +31,20 @@ export default function Menu(props) {
               </li>
               <li className="nav-item">
                 <Link
-                  to="/profile"
-                  className="nav-link active"
-                  aria-current="page"
-                >
-                  Profile
-                </Link>
-              </li>
-              <li className="nav-item">
-                <Link
                   to="/listing/new"
                   className="nav-link active"
                   aria-current="page"
                 >
                   Add Listing
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link
+                  to="/profile"
+                  className="nav-link active"
+                  aria-current="page"
+                >
+                  {props.user.name}
                 </Link>
               </li>
               <li className="nav-item" onClick={() => props.handleLogout()}>

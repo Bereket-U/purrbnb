@@ -48,7 +48,7 @@ export default function App() {
     <div className="App">
       {user ? (
         <>
-          <Menu handleLogout={handleLogout} />
+          <Menu handleLogout={handleLogout} user={user} />
 
           <Routes>
             <Route path="/" element={<HomePage listings={listings} />} />
@@ -56,7 +56,10 @@ export default function App() {
               path="/listing/new"
               element={<NewListingPage user={user} setListings={setListings} />}
             />
-            <Route path="/profile" element={<ProfilePage />} />
+            <Route
+              path="/profile"
+              element={<ProfilePage user={user} listings={listings} />}
+            />
             <Route path="/search" element={<SearchResultsPage />} />
             <Route
               path="/listing/:id"

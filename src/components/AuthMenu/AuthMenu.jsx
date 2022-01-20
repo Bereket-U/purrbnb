@@ -1,6 +1,6 @@
-import { Route, Routes, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import React from "react";
-import Search from "../Search/Search";
+
 
 export default function AuthMenu(props) {
   return (
@@ -19,9 +19,9 @@ export default function AuthMenu(props) {
             <span className="navbar-toggler-icon"></span>
           </button>
           <div className="collapse navbar-collapse" id="navbarTogglerDemo01">
-            <a className="navbar-brand" href="#">
+            <Link to="/" className="navbar-brand" >
               PurrBnB
-            </a>
+            </Link>
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
               <li className="nav-item">
                 <Link to="/" className="nav-link active" aria-current="page">
