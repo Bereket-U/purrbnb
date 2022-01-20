@@ -94,8 +94,8 @@ export default class NewListingForm extends Component {
   render() {
     return (
       <div>
-        {!this.props.editMode && <h1>New Listing Page</h1>}
-        <p className="">&nbsp;{this.state.message}</p>
+        {!this.props.editMode}
+        
         <div className="form-container">
           <form autoComplete="off" onSubmit={this.handleSubmit}>
             <h1>New Listing</h1>
