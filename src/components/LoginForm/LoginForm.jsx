@@ -44,28 +44,42 @@ export default class SignUpForm extends Component {
   render() {
     return (
       <div>
-        <div className="form-container" onSubmit={this.handleSubmit}>
-          <form autoComplete="off">
-            <label>Email</label>
-            <input
-              type="text"
-              name="email"
-              value={this.state.email}
-              onChange={this.handleChange}
-              required
-            />
-            <label>Password</label>
-            <input
-              type="password"
-              name="password"
-              value={this.state.password}
-              onChange={this.handleChange}
-              required
-            />
-            <button type="submit">LOG IN</button>
-          </form>
+        <div class="container">
+          <div class="row">
+            <div class="col">
+              <div className="form-container" onSubmit={this.handleSubmit}>
+                <form autoComplete="off">
+                  <label>Email</label>
+                  <br />
+                  <input
+                    type="text"
+                    name="email"
+                    value={this.state.email}
+                    onChange={this.handleChange}
+                    required
+                  />
+                  <br />
+                  <label>Password</label>
+                  <br />
+                  <input
+                    type="password"
+                    name="password"
+                    value={this.state.password}
+                    onChange={this.handleChange}
+                    required
+                  />
+                  <br />
+                  <button type="submit">LOG IN</button>
+                </form>
+              </div>
+              <p className="error-message">&nbsp;{this.state.error}</p>
+            </div>
+            <div class="col">
+              <p>image</p>
+              <p className="error-message">&nbsp;{this.state.error}</p>
+            </div>
+          </div>
         </div>
-        <p className="error-message">&nbsp;{this.state.error}</p>
       </div>
     );
   }
