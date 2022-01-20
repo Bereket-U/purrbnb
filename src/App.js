@@ -86,6 +86,7 @@ export default function App() {
           {/* <AuthPage setUserInState={this.setUserInState} /> */}
         </>
       )}
+      <footer className="footer">PurrBnB ©</footer>
     </div>
   );
 }
