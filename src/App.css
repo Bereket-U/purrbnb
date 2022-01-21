@@ -2,15 +2,14 @@
   text-align: center;
   background-color: whitesmoke;
   height: 100vh;
- 
+
   margin: 0 auto;
-  
 }
 
 html {
   background-color: whitesmoke;
   height: 100vh;
- 
+
   margin: 0 auto;
 }
 
@@ -179,9 +178,9 @@ select {
   font-weight: bold;
 }
 footer {
-  background-color: #6C757D;
-  color: white;
+  background-color: #6c757d;
   position: fixed;
+  color: white;
   width: 100%;
   left: 0;
   bottom: 0;
