@@ -35,6 +35,7 @@ p {
 .fixed-map {
   position: sticky;
   top: 100px;
+  margin-top: 100px;
 }
 /* ------ */
 .block-map {
