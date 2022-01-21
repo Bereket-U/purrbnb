@@ -151,7 +151,7 @@ export default class NewListingForm extends Component {
               onChange={this.handleChange}
               required
             />
-            <button className="btn btn-success" type="submit">
+            <button className="btn btn-secondary" type="submit">
               {this.generateSubmitButtonTitle()}
             </button>
             <h2 className="">&nbsp;{this.state.message}</h2>

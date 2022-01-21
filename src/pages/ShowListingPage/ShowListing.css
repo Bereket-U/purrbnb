@@ -1,0 +1,73 @@
+ .ShowListing .form-container form {
+    display: flex;  
+    flex-direction: column;
+    max-width:40vw;
+    min-width: 300px;
+    min-height: 500px;
+    max-height: 800px;
+    margin: 0 auto;
+    border-radius: 20px;
+    background-color:lightgrey;
+    
+    align-items: center;
+    justify-content: center;
+  
+  
+  }
+  
+ .ShowListing   .form-container form h1 {
+      color: black;
+      padding-top: 40px;;
+  }
+  
+ .ShowListing   .form-container form h2 {
+      color: rgb(255, 255, 255);
+      padding: 10px;
+      
+  }
+  
+ .ShowListing   .form-container form label {
+      color: white;
+      padding: 10px;
+      font-size: 18px;
+      font-weight: bold;
+  
+  }
+  .ShowListing  .form-container form input, select {
+      width: 30vw;
+      height: 30px;
+      min-width: 250px;
+      margin: 0 auto;
+      border: 2px solid lightgray;
+      border-radius: 4px;
+       background-color: #f8f8f8;
+  }
+  
+  
+ .ShowListing .form-container form textarea {
+      width: 30vw;
+      min-height: 40px;
+      min-width: 250px;
+      margin: 0 auto;
+      padding: 10px 10px;
+      box-sizing: border-box;
+      border: 2px solid lightgray;
+      border-radius: 4px;
+      background-color: #f8f8f8;
+      font-size: 16px;
+      resize:vertical;
+  
+  }
+  .ShowListing   .form-container form button {
+      width: 20vw;
+      margin: 0 auto;
+      margin-top: 20px;
+      padding: 10px 10px;
+  
+  }
+  
+  .ShowListing  img.form-image {
+    width: 60%;
+  }
+
+  

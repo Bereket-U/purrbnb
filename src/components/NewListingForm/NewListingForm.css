@@ -55,8 +55,11 @@ select {
   resize: vertical;
 }
 .form-container form button {
-  width: 20vw;
-  margin: 0 auto;
-  margin-top: 20px;
-  padding: 10px 10px;
+
+    width: 20vw;
+    margin: 0 auto;
+    margin-top: 20px;
+    padding: 10px 10px;
+  
+
 }
