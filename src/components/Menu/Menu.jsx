@@ -6,8 +6,8 @@ import "./Menu.css";
 export default function Menu(props) {
   return (
     <div>
-      <nav className="navbar navbar-expand-sm navbar-dark bg-secondary">
-        <div className="container-fluid">
+      <nav className="navbar navbar-expand-sm navbar-dark bg-secondary fixed-top ">
+        <div className="container-fluid ">
           <button
             className="navbar-toggler"
             type="button"
@@ -43,9 +43,10 @@ export default function Menu(props) {
                   to="/profile"
                   className="nav-link active"
                   aria-current="page"
-                >  
-                  
-                  {props.user.name}
+
+                >
+                  <span>{props.user.name}</span>
+
                 </Link>
               </li>
               <li className="nav-item" onClick={() => props.handleLogout()}>

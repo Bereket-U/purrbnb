@@ -9,7 +9,7 @@ export default function Search() {
   };
 
   return (
-    <div className="d-flex justify-content-center">
+    <div className="d-flex justify-content-center search ">
       <input
         className=""
         type="search"
@@ -18,6 +18,7 @@ export default function Search() {
         value={query}
         onChange={(e) => setQuery(e.target.value)}
       />
+      &nbsp;
       <button
         onClick={handleSearchClick}
         className="btn btn-outline-success"

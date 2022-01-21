@@ -44,9 +44,12 @@ export default class SignUpForm extends Component {
   render() {
     return (
       <div>
-        <div class="container">
-          <div className="form-container" onSubmit={this.handleSubmit}>
+        <div className="container">
+          <div className="Login-container" onSubmit={this.handleSubmit}>
             <form autoComplete="off">
+              <h3 className="welcome">
+                Welcome to <span>PurrBnB</span>
+              </h3>
               <label>Email</label>
               <br />
               <input
@@ -67,7 +70,9 @@ export default class SignUpForm extends Component {
                 required
               />
               <br />
-              <button type="submit">LOG IN</button>
+              <button className="btn btn-success" type="submit">
+                LOG IN
+              </button>
             </form>
           </div>
           <p className="error-message">&nbsp;{this.state.error}</p>
