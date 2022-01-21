@@ -1,12 +1,13 @@
 import React, { useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import NewListingForm from "../../components/NewListingForm/NewListingForm";
-
+import "./ShowListing.css"
 export default function ShowListing(props) {
   const [editMode, setEditMode] = useState(false);
   let navigate = useNavigate();
   let id = useParams().id;
   let listing = props.listings.find((listing) => listing._id === id);
+  console.log(listing);
 
   const handleDelete = async () => {
     try {
@@ -45,18 +46,52 @@ export default function ShowListing(props) {
     );
   }
   return (
-    <div>
-      ShowListing
+    <div className= "ShowListing">
+ 
       
-      <img src={listing.image} alt="" />
+      <div className="form-container">
+          <form >
 
-      <p>{listing.title}</p>
-      <p>{listing.price}</p>
-      <p>{listing.description}</p>
+            <h1>{listing.title} </h1>
+            
+            <label>Type</label>
+            
+            <h4>{listing.type}</h4>
+
+
+           
+            <label>Price</label>
+            <h4>{`$${listing.price} /Night`} </h4>
+            <br/>
+           
+          
+             
+            <label>Description</label>
+            <h4> {listing.description} </h4>
+            
+           <br/>
+          <img className= "form-image"src={listing.image} alt="" />
+            
+          </form>
+        </div>
+
+
+
+
+
+
+
+  
       {props.user._id === listing.user ? (
         <div>
-          <button onClick={handleDelete}>Delete</button>
-          <button onClick={toggleEditMode}>Edit</button>
+
+          <br/>
+          <br/>
+          <button onClick={handleDelete} className="btn btn-danger " > Delete </button>
+          <br/>
+
+          <br/>
+          <button onClick={toggleEditMode} className="btn btn-warning"  > Edit </button>
         </div>
       ) : (
         <> </>

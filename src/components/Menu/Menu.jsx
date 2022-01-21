@@ -43,7 +43,8 @@ export default function Menu(props) {
                   to="/profile"
                   className="nav-link active"
                   aria-current="page"
-                >
+                >  
+                  
                   {props.user.name}
                 </Link>
               </li>

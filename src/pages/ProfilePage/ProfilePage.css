@@ -1,0 +1,27 @@
+
+.ProfilePage .profilecard {
+    width: 350px;
+    background-color: rgb(75, 65, 65);
+    border:none;
+    cursor:pointer;
+    transition: all 0.5s
+}
+.ProfilePage .profileimage img {
+    transition: all 0.5s
+}
+.ProfilePage .profilecard:hover .profileimage img {
+    transform: scale(1.5)
+}
+.ProfilePage .profilebtn {
+    height:140px;
+    width: 140px;
+    border-radius:50%;
+}
+.ProfilePage .name {
+    font-size: 22px;
+    font-weight: bold
+}
+.ProfilePage .email {
+    font-size: 22px;
+    font-weight: bold
+}
