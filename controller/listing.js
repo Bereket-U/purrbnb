@@ -14,7 +14,8 @@ async function create(req, res) {
     });
 
     const listings = await Listing.find();
-    console.log(listings);
+    console.log(listings); 
+    listings.sort((a, b) => b.createdAt - a.createdAt)
     res.status(200).json(listings);
   } catch (err) {
     console.log(err);
@@ -31,12 +32,13 @@ async function getAll(req, res) {
           { description: req.query.term },
           { type: req.query.term },
           { price: req.query.term },
-        ],
-      });
+        ], 
+      })
     } else {
       listings = await Listing.find();
     }
-    console.log(listings);
+   
+    listings.sort((a, b) => b.createdAt - a.createdAt)
     res.status(200).json(listings);
   } catch (err) {
     console.log(err);
