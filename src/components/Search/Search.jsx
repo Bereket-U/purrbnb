@@ -18,6 +18,7 @@ export default function Search() {
         value={query}
         onChange={(e) => setQuery(e.target.value)}
       />
+      &nbsp;
       <button
         onClick={handleSearchClick}
         className="btn btn-outline-success"
