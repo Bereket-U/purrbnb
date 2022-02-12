@@ -22,12 +22,12 @@ export default class AuthPage extends React.Component {
             <SignUpForm setUserInState={this.props.setUserInState} />
           )}
 
-          <h3
-            className=""
+          <p
+            className="login-text"
             onClick={() => this.setState({ showLogin: !this.state.showLogin })}
           >
             {this.state.showLogin ? "Don't have an account? Signup" : "Log in"}
-          </h3>
+          </p>
         </div>
       </div>
     );

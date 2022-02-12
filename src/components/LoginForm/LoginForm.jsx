@@ -43,40 +43,42 @@ export default class SignUpForm extends Component {
 
   render() {
     return (
-      <div>
-        <div className="container">
-          <div className="Login-container" onSubmit={this.handleSubmit}>
-            <form autoComplete="off">
-              <h3 className="welcome">
-                Welcome to <span>PurrBnB</span>
-              </h3>
-              <label>Email</label>
-              <br />
-              <input
-                type="text"
-                name="email"
-                value={this.state.email}
-                onChange={this.handleChange}
-                required
-              />
-              <br />
-              <label>Password</label>
-              <br />
-              <input
-                type="password"
-                name="password"
-                value={this.state.password}
-                onChange={this.handleChange}
-                required
-              />
-              <br />
-              <button className="btn btn-success" type="submit">
-                LOG IN
-              </button>
-            </form>
+      <div className="login">
+        <form autoComplete="off" onSubmit={this.handleSubmit}>
+          <h3 className="welcome">
+            <span>Sign in</span>
+          </h3>
+          <div className="form-floating mb-3">
+            <input
+              className="form-control form-control-sm"
+              type="text"
+              name="email"
+              id="email"
+              value={this.state.email}
+              onChange={this.handleChange}
+              required
+            />
+            <label for="email">Email address</label>
           </div>
-          <p className="error-message">&nbsp;{this.state.error}</p>
-        </div>
+          <div className="form-floating mb-3">
+            <input
+              className="form-control"
+              id="password"
+              type="password"
+              name="password"
+              value={this.state.password}
+              onChange={this.handleChange}
+              required
+            />
+            <label for="password">Password</label>
+          </div>
+
+          <button className="btn  btn-outline-dark col-12" type="submit">
+            LOG IN
+          </button>
+        </form>
+
+        {/* <p className="error-message">&nbsp;{this.state.error}</p> */}
       </div>
     );
   }
