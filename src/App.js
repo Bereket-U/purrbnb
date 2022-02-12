@@ -54,6 +54,7 @@ export default function App() {
       {user ? (
         <>
           <Menu handleLogout={handleLogout} user={user} />
+          <footer className="footer">PurrBnB ©</footer>
 
           <Routes>
             <Route path="/" element={<HomePage listings={listings} />} />
@@ -90,10 +91,6 @@ export default function App() {
           {/* <AuthPage setUserInState={this.setUserInState} /> */}
         </>
       )}
-      <br />
-      <br />
-      <br />
-      <footer className="footer">PurrBnB ©</footer>
     </div>
   );
 }

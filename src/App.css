@@ -70,7 +70,6 @@ Link {
   justify-content: center;
 }
 
-
 .Login-container form h1 {
   color: white;
   padding-top: 40px;
@@ -189,4 +188,5 @@ footer {
   text-align: center;
   padding-top: 7px;
   height: 40px;
+  z-index: 1;
 }
