@@ -11,8 +11,16 @@ export default class AuthPage extends React.Component {
 
   render() {
     return (
-      <div className="d-flex">
-        <div className="left-side"> new</div>
+      <div className="d-flex landing">
+        <div className="left-side">
+          <div className="branding">
+            <h1 className="">Welcome to PurBnB</h1>
+            <h3>
+              Prove to your cat that you care! Go to your trip with no worries,
+              Your cat will be in good hands
+            </h3>
+          </div>
+        </div>
         {/* Another ternary operator! */}
         {/* If showLogin is true, show the login form. If false, show the signup form */}
         <div className="right-side">
