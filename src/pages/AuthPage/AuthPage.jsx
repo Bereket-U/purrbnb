@@ -11,28 +11,25 @@ export default class AuthPage extends React.Component {
 
   render() {
     return (
-      <main className="AuthPage">
-        
-            <AuthMenu />
-          <div className="form-center-cont">    
-            <br />
+      <div className="d-flex">
+        <div className="left-side"> new</div>
+        {/* Another ternary operator! */}
+        {/* If showLogin is true, show the login form. If false, show the signup form */}
+        <div className="right-side">
+          {this.state.showLogin ? (
+            <LoginForm setUserInState={this.props.setUserInState} />
+          ) : (
+            <SignUpForm setUserInState={this.props.setUserInState} />
+          )}
 
-            {/* Another ternary operator! */}
-            {/* If showLogin is true, show the login form. If false, show the signup form */}
-            {this.state.showLogin ? (
-              <LoginForm setUserInState={this.props.setUserInState} />
-            ) : (
-              <SignUpForm setUserInState={this.props.setUserInState} />
-            )}
-
-            <h3
-              className="signup-login"
-              onClick={() => this.setState({ showLogin: !this.state.showLogin })}
-            >
-              {this.state.showLogin ? "Don't have an account? Signup" : "Log in"}
-            </h3>
-          </div>      
-      </main>
+          <h3
+            className=""
+            onClick={() => this.setState({ showLogin: !this.state.showLogin })}
+          >
+            {this.state.showLogin ? "Don't have an account? Signup" : "Log in"}
+          </h3>
+        </div>
+      </div>
     );
   }
 }
