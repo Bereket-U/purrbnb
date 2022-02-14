@@ -7,7 +7,7 @@
 
 .landing {
   /* min-height: 100vh; */
-  background: linear-gradient(225deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background: linear-gradient(240deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
   background-size: 400% 400%;
 }
 @keyframes gradient {
@@ -29,7 +29,9 @@
   align-items: center;
   justify-content: center;
 }
-
+.right-side p {
+  color: white;
+}
 .left-side {
   width: 50%;
   min-height: 100vh;
@@ -39,10 +41,10 @@
   font-family: "Raleway", sans-serif;
   font-weight: bolder;
   justify-content: center;
-  color: white;
 }
-.left-side h3,
-h1 {
+.landing h3,
+h1,
+p {
   color: white;
 }
 .branding {
@@ -51,7 +53,6 @@ h1 {
   flex-direction: column;
   justify-content: center;
   max-width: 500px;
-  color: white;
 }
 .login {
   width: 60%;
@@ -82,5 +83,8 @@ h1 {
     /* min-height: 100vh; */
     background: linear-gradient(257deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
     background-size: 400% 400%;
+  }
+  .login {
+    width: 90%;
   }
 }

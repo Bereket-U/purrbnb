@@ -34,7 +34,9 @@ export default class AuthPage extends React.Component {
             className="login-text"
             onClick={() => this.setState({ showLogin: !this.state.showLogin })}
           >
-            {this.state.showLogin ? "Don't have an account? Signup" : "Log in"}
+            {this.state.showLogin
+              ? "Don't have an account? Sign up"
+              : "Already registered? Log in"}
           </p>
         </div>
       </div>
