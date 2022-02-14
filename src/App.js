@@ -87,7 +87,6 @@ export default function App() {
               element={<AuthPage setUserInState={setUserInState} />}
             />
           </Routes>
-
           {/* <AuthPage setUserInState={this.setUserInState} /> */}
         </>
       )}
