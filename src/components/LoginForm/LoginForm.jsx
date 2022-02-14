@@ -50,7 +50,7 @@ export default class SignUpForm extends Component {
           </h3>
           <div className="form-floating mb-3">
             <input
-              className="form-control form-control-sm"
+              className="form-control form-control-lg"
               type="text"
               name="email"
               id="email"
@@ -62,7 +62,7 @@ export default class SignUpForm extends Component {
           </div>
           <div className="form-floating mb-3">
             <input
-              className="form-control"
+              className="form-control form-control-lg"
               id="password"
               type="password"
               name="password"
@@ -73,12 +73,12 @@ export default class SignUpForm extends Component {
             <label for="password">Password</label>
           </div>
 
-          <button className="btn  btn-outline-dark col-12" type="submit">
+          <button className="btn  btn-outline-light col-12" type="submit">
             LOG IN
           </button>
         </form>
 
-        {/* <p className="error-message">&nbsp;{this.state.error}</p> */}
+        <p className="error-message">&nbsp;{this.state.error}</p>
       </div>
     );
   }
