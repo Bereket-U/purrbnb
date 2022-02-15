@@ -46,8 +46,8 @@ export default class SignUpForm extends Component {
     return (
       <div className="login">
         <form autoComplete="off" onSubmit={this.handleSubmit}>
-          <h3 className="welcome">
-            Please <span>Sign up</span>
+          <h3>
+            <span>Sign up</span>
           </h3>
           <div className="form-floating mb-3">
             <input
